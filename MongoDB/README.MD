@@ -40,7 +40,9 @@ JSON which DB engine eventually translates to BSON before storing.
 MongoDB shell allows you to interact with MongoDB Server and is quiet flexible.
 ```javascript
 show dbs                            //Show all existing databases
+db                                  //Shows current database
 show collections                    //Show all collections in a database
+db.dropDatabase()                   // Removes current DB
 use [db_name]                       // Set working DB
 db.createCollection(name,options)   //name is the collection name and options is an optional field that we can use to specify certain parameters such as size, max number of documents etc. in the collection.
 db.[collection_name].[command_name] //General format of mongoDB commands
@@ -58,6 +60,29 @@ db.products.insertOne(
         age: 10
     }
 )
-db.products.find() // returns all documents
+// You can provide your own ID as long as its unique
+db.products.insertOne(
+    {
+        name: "bamdad",
+        age: 10,
+        _id: 1
+    }
+)
+// Insert multipel documents at once
+db.products.insertOne(
+    [{
+        name: "bamdad",
+        age: 10,
+        _id: 1
+    },
+    {
+        name: "bamdad",
+        age: 10,
+        _id: 1
+    }]
+)
+db.products.find()      // returns all documents
+db.products.findOne()   // returns one documents
 db.products.find().pretty() // returns all douments while prettified
+db.products.deleteOne({_id: 123456})    //Remove the first document 
 ```
