@@ -69,20 +69,28 @@ db.products.insertOne(
     }
 )
 // Insert multipel documents at once
-db.products.insertOne(
+db.products.insertMany(
     [{
-        name: "bamdad",
+        name: "Ali",
         age: 10,
-        _id: 1
+        _id: 2
     },
     {
-        name: "bamdad",
-        age: 10,
-        _id: 1
+        name: "Mo",
+        age: 20,
+        _id: 3
     }]
 )
-db.products.find()      // returns all documents
-db.products.findOne()   // returns one documents
-db.products.find().pretty() // returns all douments while prettified
-db.products.deleteOne({_id: 123456})    //Remove the first document 
+db.products.find()              // returns all documents
+db.products.findOne()           // returns one documents
+db.products.find().pretty()     // returns all douments while prettified
+
+db.products.find({price: {$gte: 100}}) //find greater than or equal
+db.products.deleteOne({_id: 123456})    //Remove the first document with given ID
+db.products.deleteMany({_id: 123456})    //Remove all document with given ID
+
+//Don't forget $set when updating
+db.products.updateOne({age: 10}, { $set:{{lastname: "kordi" }})
+
+db.products.updateMany({}, { $set:{{locked: false }})
 ```
