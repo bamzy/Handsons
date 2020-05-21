@@ -1,13 +1,12 @@
-## React
+
+# React:
 * A javascript **library** for building user interfaces
 * It's component-based and declarative
 * Highly reactive javascript apps
 * Probably the most used UI library
-* Breaks your UI into components
+<hr>
 
-
-
-## Basic Logic
+## The general idea of React
 **1- First, you need an HTML element**
 ```html
  <div id="root">
@@ -35,7 +34,7 @@ JSX is an XML/HTML-like syntax used by React that extends ECMAScript so that XML
 
 Basically, by using JSX you can write concise HTML/XML-like structures (e.g., DOM like tree structures) in the same file as you write JavaScript code, then Babel will transform these expressions into actual JavaScript code. Unlike the past, instead of putting JavaScript into HTML, JSX allows us to put HTML into JavaScript.
 
-
+<hr/>
 ## Next-Gen JavaScript features used in React
 
 **1- let & const**
@@ -154,7 +153,7 @@ function mySort(...args){
 Easily extract array elements or object properties and store them in variables
 ```js
 //Array Destructuring
-[a,b] = ['hello','Max'];
+[a,,b] = ['hello','to','Max'];
 console.log(a); // Hello
 console.log(b); // Max
 
@@ -171,4 +170,33 @@ const arr = [1,2,3];
 const timesTwo = arr.map((num) => {return num*2});
 ```
 
-**This is a general JS note: primitive types are passed by copy while objects and arrays are by reference**
+**This is a general JS reminder: primitive types are passed by value while objects and arrays are passed by reference**
+
+<hr/>
+##Chapter One: The Basics
+
+**1- Tools:**
+* Dependency manager: npm
+* Bundler: Webpack
+* Nexg-gen JS Compiler: Babel + Presets
+* use the official create-react-app by:
+```shell
+> npm install create-react-app -g
+> create-react-app react-basics --script-version 1.1.5
+```
+
+
+
+
+
+
+
+
+
+
+
+##Useful npm commands:
+```shell
+npm cache verify    // Heals the npm cache
+npm audit fix       // Auto-Fixes security volnerabilities
+```
