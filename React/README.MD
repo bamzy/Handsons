@@ -183,8 +183,10 @@ const timesTwo = arr.map((num) => {return num*2});
 ```shell
 > npm install create-react-app -g
 > create-react-app react-basics --script-version 1.1.5
+> cd react-basics
+> npm start
 ```
-
+**2- Folder Structure**
 
 
 
