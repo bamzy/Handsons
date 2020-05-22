@@ -11,7 +11,7 @@
 ```html
  <div id="root">
 ```
-**2- Then you define a JS(JFX) function that contains the render logic**
+**2- Then you define a JS(JSX) function that contains the render logic**
 ```js
  function Person(props){
             return(
@@ -187,14 +187,35 @@ const timesTwo = arr.map((num) => {return num*2});
 > npm start     //Starts the dev server
 > npm test      //runs tests
 ```
-**2- Folder Structure**
+**2- JSX Restrictions**
+* Use *className* instead of *class*
+```js
+render(){
+    return(
+        <div className="form">
+            <h1></h1>
+        </div>
+    );
+}
+```
+* what you return needs to have only one root element
+```js
+    return(
+        <div><p>blah blah</p>
+        </div>
+        // everything needs to be nested under one root element
+        <h1>This will cause error</h1>
+    );
+```
 
 
 
-
-
-
-
+* Changing the *state* and *props* will signal React to reload DOM
+* In order to change the state, you need to use setState() to override it
+```js
+this.setState({persons: [{name: "Max1", age: 22},
+      {name: "Emily1", age: 23}]})
+``` 
 
 
 
