@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:padding="7.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ScrollView android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TextView android:textSize="17.0dip" android:textColor="@color/mainBasicColor" android:gravity="center" android:background="@color/DrawerColor" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="RC Tuning / Battery" />
+                <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="4.0dip" />
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="14.0dip" android:textColor="@color/mulSettingContent" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50.0dip" android:text="RC\nRate" android:layout_weight="1.0" />
+                        <android.support.v4.widget.Space android:layout_width="3.0dip" android:layout_height="fill_parent" />
+                        <EditText android:textSize="14.0dip" android:textColor="@color/mulSettingText" android:gravity="center" android:id="@id/rc_rate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.0" android:ems="10" android:layout_weight="1.0" android:inputType="numberDecimal" android:imeOptions="flagNoExtractUi" />
+                        <android.support.v4.widget.Space android:layout_width="5.0dip" android:layout_height="fill_parent" />
+                        <TextView android:textSize="14.0dip" android:textColor="@color/mulSettingContent" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50.0dip" android:text="Thr\nMid" android:layout_weight="1.0" />
+                        <android.support.v4.widget.Space android:layout_width="3.0dip" android:layout_height="fill_parent" />
+                        <EditText android:textSize="14.0dip" android:textColor="@color/mulSettingText" android:gravity="center" android:id="@id/Thr_mid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.0" android:ems="10" android:layout_weight="1.0" android:inputType="numberDecimal" android:imeOptions="flagNoExtractUi" />
+                    </LinearLayout>
+                    <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="3.0dip" />
+                    <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="14.0dip" android:textColor="@color/mulSettingContent" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50.0dip" android:text="RC\nExpo" android:layout_weight="1.0" />
+                        <android.support.v4.widget.Space android:layout_width="3.0dip" android:layout_height="fill_parent" />
+                        <EditText android:textSize="14.0dip" android:textColor="@color/mulSettingText" android:gravity="center" android:id="@id/rc_expo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.0" android:ems="10" android:layout_weight="1.0" android:inputType="numberDecimal" android:imeOptions="flagNoExtractUi" />
+                        <android.support.v4.widget.Space android:layout_width="5.0dip" android:layout_height="fill_parent" />
+                        <TextView android:textSize="14.0dip" android:textColor="@color/mulSettingContent" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50.0dip" android:text="Thr\nExpo" android:layout_weight="1.0" />
+                        <android.support.v4.widget.Space android:layout_width="3.0dip" android:layout_height="fill_parent" />
+                        <EditText android:textSize="14.0dip" android:textColor="@color/mulSettingText" android:gravity="center" android:id="@id/Thr_expo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.0" android:ems="10" android:layout_weight="1.0" android:inputType="numberDecimal" android:imeOptions="flagNoExtractUi" />
+                    </LinearLayout>
+                    <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="3.0dip" />
+                    <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="14.0dip" android:textColor="@color/mulSettingContent" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50.0dip" android:text="RP\nRate" android:layout_weight="1.0" />
+                        <android.support.v4.widget.Space android:layout_width="3.0dip" android:layout_height="fill_parent" />
+                        <EditText android:textSize="14.0dip" android:textColor="@color/mulSettingText" android:gravity="center" android:id="@id/rp_rate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.0" android:ems="10" android:layout_weight="1.0" android:inputType="numberDecimal" android:imeOptions="flagNoExtractUi" />
+                        <android.support.v4.widget.Space android:layout_width="5.0dip" android:layout_height="fill_parent" />
+                        <TextView android:textSize="14.0dip" android:textColor="@color/mulSettingContent" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50.0dip" android:text="Yaw\nRate" android:layout_weight="1.0" />
+                        <android.support.v4.widget.Space android:layout_width="3.0dip" android:layout_height="fill_parent" />
+                        <EditText android:textSize="14.0dip" android:textColor="@color/mulSettingText" android:gravity="center" android:id="@id/yaw_rate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.0" android:ems="10" android:layout_weight="1.0" android:inputType="numberDecimal" android:imeOptions="flagNoExtractUi" />
+                    </LinearLayout>
+                </LinearLayout>
+                <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="13.0dip" />
+                <TextView android:textSize="17.0dip" android:textColor="@color/mainBasicColor" android:gravity="center" android:background="@color/DrawerColor" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Throttle Setting" />
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="14.0dip" android:textColor="@color/mulSettingContent" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50.0dip" android:text="MIN" android:layout_weight="1.0" />
+                        <android.support.v4.widget.Space android:layout_width="3.0dip" android:layout_height="fill_parent" />
+                        <EditText android:textSize="14.0dip" android:textColor="@color/mulSettingText" android:gravity="center" android:id="@id/throttle_min" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1050" android:ems="10" android:layout_weight="1.0" android:inputType="number" android:imeOptions="flagNoExtractUi" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="14.0dip" android:textColor="@color/mulSettingContent" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50.0dip" android:text="MAX" android:layout_weight="1.0" />
+                        <android.support.v4.widget.Space android:layout_width="3.0dip" android:layout_height="fill_parent" />
+                        <EditText android:textSize="14.0dip" android:textColor="@color/mainTextColor" android:gravity="center" android:id="@id/throttle_max" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2000" android:ems="10" android:layout_weight="1.0" android:inputType="number" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="14.0dip" android:textColor="@color/mulSettingContent" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50.0dip" android:text="Failsafe" android:layout_weight="1.0" />
+                        <android.support.v4.widget.Space android:layout_width="3.0dip" android:layout_height="fill_parent" />
+                        <EditText android:textSize="14.0dip" android:textColor="@color/mulSettingText" android:gravity="center" android:id="@id/failsafe" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:ems="10" android:layout_weight="1.0" android:inputType="numberDecimal" android:imeOptions="flagNoExtractUi" />
+                    </LinearLayout>
+                </LinearLayout>
+                <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="15.0dip" />
+                <TextView android:textSize="17.0dip" android:textColor="@color/mainBasicColor" android:gravity="center" android:background="@color/DrawerColor" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Battery" />
+                <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="7.0dip" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="14.0dip" android:textColor="@color/mulSettingContent" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50.0dip" android:text="Scale" android:layout_weight="1.0" />
+                    <android.support.v4.widget.Space android:layout_width="3.0dip" android:layout_height="fill_parent" />
+                    <EditText android:textSize="14.0dip" android:textColor="@color/mulSettingText" android:gravity="center" android:id="@id/vbat_scale" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:ems="10" android:layout_weight="1.0" android:inputType="number" android:imeOptions="flagNoExtractUi" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="14.0dip" android:textColor="@color/mainTextColor" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50.0dip" android:text="현재 전압" android:layout_weight="1.0" />
+                    <android.support.v4.widget.Space android:layout_width="3.0dip" android:layout_height="fill_parent" />
+                    <EditText android:textSize="14.0dip" android:textColor="@color/mainTextColor" android:gravity="center" android:id="@id/current_vbat" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.0" android:ems="10" android:layout_weight="1.0" android:inputType="numberDecimal" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="14.0dip" android:textColor="@color/mulSettingContent" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50.0dip" android:text="1단계 경고" android:layout_weight="1.0" />
+                    <android.support.v4.widget.Space android:layout_width="3.0dip" android:layout_height="fill_parent" />
+                    <EditText android:textSize="14.0dip" android:gravity="center" android:id="@id/vbat_warning1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.0" android:ems="10" android:layout_weight="1.0" android:inputType="numberDecimal" android:imeOptions="flagNoExtractUi" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="14.0dip" android:textColor="@color/mulSettingContent" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50.0dip" android:text="2단계 경고" android:layout_weight="1.0" />
+                    <android.support.v4.widget.Space android:layout_width="3.0dip" android:layout_height="fill_parent" />
+                    <EditText android:textSize="14.0dip" android:textColor="@color/mulSettingText" android:gravity="center" android:id="@id/vbat_warning2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.0" android:ems="10" android:layout_weight="1.0" android:inputType="numberDecimal" android:imeOptions="flagNoExtractUi" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="14.0dip" android:textColor="@color/mulSettingContent" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50.0dip" android:text="3단계경고" android:layout_weight="1.0" />
+                    <android.support.v4.widget.Space android:layout_width="3.0dip" android:layout_height="fill_parent" />
+                    <EditText android:textSize="14.0dip" android:textColor="@color/mulSettingText" android:gravity="center" android:id="@id/vbat_warning3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.0" android:ems="10" android:layout_weight="1.0" android:inputType="numberDecimal" android:imeOptions="flagNoExtractUi" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

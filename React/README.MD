@@ -216,9 +216,33 @@ render(){
 this.setState({persons: [{name: "Max1", age: 22},
       {name: "Emily1", age: 23}]})
 ``` 
-
-
-
+* state only exists when you are inheriting from Component classs
+* every class component can be replaced by a function component and vice versa
+```js
+const App = props => {
+  const [personsState,setPersonsState] = useState({
+    persons: [
+      {name: "Bamzy", age: 22},
+    ],
+    someOtherField: 'blah blah'
+  })
+  const switchNameHandler = () => {
+    setPersonsState({
+      persons: [
+        {name: "Bamdad", age: 22},
+      ],
+      someOtherField: personsState.someOtherField
+    });
+  }
+  return (
+      <div className="form">
+        <button onClick={switchNameHandler}>Switch Name</button>
+        <Person name={personsState.persons[1].name} age={personsState.persons[1].age}>ffff</Person>
+      </div>
+  );
+}
+```
+* you can pass methods as props too.
 ##Useful npm commands:
 ```shell
 npm cache verify    // Heals the npm cache

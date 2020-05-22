@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout android:id="@id/joystick1_drawer_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <jjun.drmsfly_new.Controller.Joystick1_view android:id="@id/joystick1" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:layout_gravity="start" android:orientation="vertical" android:layout_width="200.0dip" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/character_round" android:minWidth="40.0dip" android:minHeight="40.0dip" />
+            <android.support.v4.widget.Space android:layout_width="2.0dip" android:layout_height="fill_parent" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TextView android:textSize="20.0dip" android:textColor="@color/mainTopic_1" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="D R M S" />
+                <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="3.0dip" />
+                <TextView android:textSize="15.0dip" android:textColor="@color/mainTopic_2" android:gravity="center" android:id="@id/mybtAddress" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="00:00:00:00:00:00" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/drawermenu" android:minWidth="40.0dip" android:minHeight="40.0dip" />
+                <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="2.0dip" />
+                <TextView android:textColor="@color/mainTopic_2" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Cafe" />
+            </LinearLayout>
+            <android.support.v4.widget.Space android:layout_width="5.0dip" android:layout_height="fill_parent" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/drawermenu" android:minWidth="40.0dip" android:minHeight="40.0dip" />
+                <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="2.0dip" />
+                <TextView android:textColor="@color/mainTopic_2" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Web" />
+            </LinearLayout>
+            <android.support.v4.widget.Space android:layout_width="5.0dip" android:layout_height="fill_parent" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/drawermenu" android:minWidth="40.0dip" android:minHeight="40.0dip" />
+                <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="5.0dip" />
+                <TextView android:textColor="@color/mainTopic_2" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="App" />
+            </LinearLayout>
+        </LinearLayout>
+        <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="5.0dip" />
+        <LinearLayout android:orientation="vertical" android:background="@color/DrawerColor" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="20.0dip" android:textColor="@color/mainTopic_1" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Menu" />
+            <ListView android:id="@id/drawer_list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="60.0dip">
+        <LinearLayout android:gravity="center" android:id="@id/joystick_setting" android:background="@color/joystickSettingSelected" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="30.0dip" android:textColor="#ff000000" android:gravity="center" android:id="@id/joystick" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Joystick" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@id/control_setting" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="30.0dip" android:textColor="#ff000000" android:gravity="center" android:id="@id/control" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Control" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@id/bottom_setting" android:background="@color/joystickSettingSelected" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

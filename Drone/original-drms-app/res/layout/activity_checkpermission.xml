@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="45.0dip" android:paddingTop="25.0dip" android:paddingRight="45.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:paddingLeft="40.0dip" android:paddingRight="40.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30.0dip" app:srcCompat="@mipmap/location" />
+        <LinearLayout android:gravity="center|left" android:orientation="vertical" android:paddingLeft="15.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="#ffff0000" android:gravity="left" android:paddingLeft="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="Location" />
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="I don't know where this text is going to go1" />
+        </LinearLayout>
+    </LinearLayout>
+    <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="10.0dip" />
+    <LinearLayout android:gravity="center" android:paddingLeft="40.0dip" android:paddingRight="40.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30.0dip" app:srcCompat="@mipmap/storage" />
+        <LinearLayout android:gravity="center|left" android:orientation="vertical" android:paddingLeft="15.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="#ffff0000" android:gravity="left" android:paddingLeft="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="Storage Space" />
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="I don't know where this text is going to go2" />
+        </LinearLayout>
+    </LinearLayout>
+    <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="20.0dip" />
+    <LinearLayout android:gravity="center" android:paddingLeft="40.0dip" android:paddingRight="40.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30.0dip" app:srcCompat="@mipmap/etc" />
+        <LinearLayout android:gravity="center|left" android:orientation="vertical" android:paddingLeft="15.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="#ff0000ff" android:gravity="left" android:paddingLeft="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="Other" />
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Pairing with Bluetooth device" />
+        </LinearLayout>
+    </LinearLayout>
+    <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="20.0dip" />
+    <LinearLayout android:gravity="center" android:paddingLeft="30.0dip" android:paddingRight="30.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:textSize="20.0dip" android:textStyle="bold" android:id="@id/permission_check" android:background="#ffafafaf" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Approved" />
+    </LinearLayout>
+</LinearLayout>

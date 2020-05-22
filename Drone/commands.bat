@@ -1,0 +1,1 @@
+apktool b original-drms-app -o new.apk & jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore key.keystore new.apk sadegh & platform-tools\adb.exe install new.apk

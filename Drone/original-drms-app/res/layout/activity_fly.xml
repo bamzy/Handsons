@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout android:id="@id/drawer" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/main_layout" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@color/dronemain_Color" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="55.0dip">
+            <ImageView android:id="@id/menu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/ic_launcher" android:minWidth="40.0dip" android:minHeight="40.0dip" />
+            <TextView android:textSize="25.0dip" android:textStyle="bold" android:textColor="@color/nameColor" android:gravity="right" android:paddingRight="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ZAREH" android:layout_weight="1.0" />
+            <TextView android:textSize="25.0dip" android:textStyle="bold" android:textColor="@color/nameColor" android:gravity="left" android:paddingLeft="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FLYER" android:layout_weight="1.0" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/quad_drone" android:maxWidth="40.0dip" android:maxHeight="40.0dip" android:minWidth="40.0dip" android:minHeight="40.0dip" />
+        </LinearLayout>
+        <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="3.0dip" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="#ffefefef" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="50.0dip">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@color/dronemain_Color" android:paddingLeft="3.0dip" android:paddingRight="3.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minHeight="55.0dip">
+                    <TextView android:textSize="20.0dip" android:textColor="#ffefefef" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="30.0dip" android:text="صادق" />
+                    <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="2.0dip" />
+                    <TextView android:textSize="20.0dip" android:textColor="#ffefefef" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="30.0dip" android:text="Dronefly" />
+                </LinearLayout>
+                <android.support.v4.widget.Space android:layout_width="5.0dip" android:layout_height="fill_parent" />
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:textSize="20.0dip" android:textColor="@color/btDisconnected" android:id="@id/device_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" قطع... " />
+                    <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="3.0dip" />
+                    <TextView android:textSize="15.0dip" android:textColor="@color/btDisconnected" android:id="@id/device_address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" ... " />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                    <ImageView android:id="@id/bluetooth" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/bluetooth" android:minWidth="50.0dip" android:minHeight="40.0dip" />
+                    <ProgressBar android:id="@id/tryconnect" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?android:attr/progressBarStyle" />
+                </LinearLayout>
+            </LinearLayout>
+            <android.support.v4.widget.Space android:layout_width="3.0dip" android:layout_height="fill_parent" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@color/dronemain_Color" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <ImageView android:id="@id/controller" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/controller" android:minWidth="40.0dip" android:minHeight="40.0dip" />
+                <android.support.v4.widget.Space android:layout_width="5.0dip" android:layout_height="fill_parent" />
+                <TextView android:textSize="18.0dip" android:textColor="@color/contDis" android:gravity="center" android:id="@id/controller_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="کنترلر قطع است" />
+            </LinearLayout>
+        </LinearLayout>
+        <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="3.0dip" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:background="#ffefefef" android:padding="3.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <LinearLayout android:orientation="vertical" android:id="@id/playflight" android:background="@color/dronemain_Color" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </LinearLayout>
+            <android.support.v4.widget.Space android:layout_width="3.0dip" android:layout_height="fill_parent" />
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <LinearLayout android:background="#ffefefef" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <LinearLayout android:orientation="vertical" android:id="@id/setting" android:background="@color/dronemain_Color" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                </LinearLayout>
+                <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="3.0dip" />
+                <LinearLayout android:background="#ffefefef" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <LinearLayout android:orientation="vertical" android:id="@id/uploading" android:background="@color/dronemain_Color" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                </LinearLayout>
+                <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="3.0dip" />
+                <LinearLayout android:background="#ffefefef" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <LinearLayout android:orientation="vertical" android:id="@id/etc" android:background="@color/dronemain_Color" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="start" android:orientation="vertical" android:layout_width="200.0dip" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/character_round" android:minWidth="40.0dip" android:minHeight="40.0dip" />
+            <android.support.v4.widget.Space android:layout_width="2.0dip" android:layout_height="fill_parent" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TextView android:textSize="20.0dip" android:textColor="@color/nameColor" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="صادوغ" />
+                <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="3.0dip" />
+                <TextView android:textSize="15.0dip" android:textColor="@color/mainTopic_2" android:gravity="center" android:id="@id/mybtAddress" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="No device" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:id="@id/gotoCafe" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/cafe" android:minWidth="40.0dip" android:minHeight="40.0dip" />
+                <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="2.0dip" />
+                <TextView android:textColor="@color/mainTopic_2" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="خرید" />
+            </LinearLayout>
+            <android.support.v4.widget.Space android:layout_width="5.0dip" android:layout_height="fill_parent" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:id="@id/gotoWeb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/web" android:minWidth="40.0dip" android:minHeight="40.0dip" />
+                <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="2.0dip" />
+                <TextView android:textColor="@color/mainTopic_2" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="سایت ما" />
+            </LinearLayout>
+            <android.support.v4.widget.Space android:layout_width="5.0dip" android:layout_height="fill_parent" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:id="@id/gotoApp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/app" android:minWidth="40.0dip" android:minHeight="40.0dip" />
+                <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="5.0dip" />
+                <TextView android:textColor="@color/mainTopic_2" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="برنامه" />
+            </LinearLayout>
+        </LinearLayout>
+        <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="5.0dip" />
+        <LinearLayout android:orientation="vertical" android:background="@color/DrawerColor" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="20.0dip" android:textColor="@color/mainTopic_1" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Menu" />
+            <ListView android:id="@id/drawer_list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>
