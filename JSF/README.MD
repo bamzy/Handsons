@@ -10,6 +10,11 @@ What is it?
 * Help manage application's state through multiple pages
 * And most importantly, you can validate form data!
 ##JSF Architecture
+
+* Third party(free) UI components
+    * OpenFaces
+    * RichFace
+    * PrimeFaces
 ![picture 1](./images/7ce04f7fa825a323c71022c610cc1f27dbbb0fe5d6465a1050d90a7c538a377f.png)  
 
 * JavaBeans handle model and data
@@ -30,3 +35,13 @@ If the local value is invalid, JSF adds an error message to the FacesContext ins
 * **Phase 5:** Invoke application, JSF handles any application-level events, such as submitting a form/linking to another page.
 
 * **Phase 6:** Render response, JSF asks container/application server to render the page if the application is using JSP pages. 
+
+## Components of a JSF Application
+1- A set of web pages to layout UI components (facelets)
+2- A set of managed Beans (backend)
+3- A web deployment descriptor (web.xml)
+* Optionally:
+    * application configuration files (faces-config.xml)
+    * custom objects, components, custom tags and validators
+    
+![picture 5](./images/30c53ab73f477b66b2bf5cdcacc32c1885141d353713dea35c58729d573d0670.png)  
