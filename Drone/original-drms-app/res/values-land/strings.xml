@@ -34,14 +34,14 @@
     <string name="abc_font_family_subhead_material">sans-serif</string>
     <string name="abc_font_family_title_material">sans-serif-medium</string>
     <string name="app_name">پهپاد زارع</string>
-    <string name="button_scan">Scan for devicees</string>
+     <string name="button_scan">جستجوی دستگاه</string>
     <string name="close_drawer">close drawer</string>
     <string name="none_found" />
-    <string name="none_paired">No devices have been paired</string>
+    <string name="none_paired">هیچ دستگاهی مشترک نشده</string>
     <string name="open_drawer">open drawer</string>
-    <string name="scanning">scanning for devices...</string>
-    <string name="select_device">select a device to connect</string>
-    <string name="settingWarning"></string>
-    <string name="title_other_devices">Other Available Devices</string>
-    <string name="title_paired_devices">Paired Devices</string>
+    <string name="scanning">در حال جستجو برای دستگاه...</string>
+    <string name="select_device">دستگاه مورد نظر را انتخاب کنید</string>
+    <string name="settingWarning">لطفا در تغییر تنظیمات پیشفرض پهپاد خود دقت کنید</string>
+    <string name="title_other_devices">سایر قطعات قابل استفاده</string>
+    <string name="title_paired_devices">قطعات مشترک شده</string>
 </resources>

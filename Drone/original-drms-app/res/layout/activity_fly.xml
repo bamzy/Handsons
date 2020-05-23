@@ -5,8 +5,8 @@
       xmlns:android="http://schemas.android.com/apk/res/android">
         <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@color/dronemain_Color" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="55.0dip">
             <ImageView android:id="@id/menu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/ic_launcher" android:minWidth="40.0dip" android:minHeight="40.0dip" />
-            <TextView android:textSize="25.0dip" android:textStyle="bold" android:textColor="@color/nameColor" android:gravity="right" android:paddingRight="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ZAREH" android:layout_weight="1.0" />
-            <TextView android:textSize="25.0dip" android:textStyle="bold" android:textColor="@color/nameColor" android:gravity="left" android:paddingLeft="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FLYER" android:layout_weight="1.0" />
+            <TextView android:textSize="25.0dip" android:textStyle="bold" android:textColor="@color/nameColor" android:gravity="right" android:paddingRight="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="زارع" android:layout_weight="1.0" />
+            <TextView android:textSize="25.0dip" android:textStyle="bold" android:textColor="@color/nameColor" android:gravity="left" android:paddingLeft="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="پهپاد" android:layout_weight="1.0" />
             <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/quad_drone" android:maxWidth="40.0dip" android:maxHeight="40.0dip" android:minWidth="40.0dip" android:minHeight="40.0dip" />
         </LinearLayout>
         <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="3.0dip" />
@@ -15,7 +15,7 @@
                 <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minHeight="55.0dip">
                     <TextView android:textSize="20.0dip" android:textColor="#ffefefef" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="30.0dip" android:text="صادق" />
                     <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="2.0dip" />
-                    <TextView android:textSize="20.0dip" android:textColor="#ffefefef" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="30.0dip" android:text="Dronefly" />
+                    <TextView android:textSize="20.0dip" android:textColor="#ffefefef" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="30.0dip" android:text="پهپاد" />
                 </LinearLayout>
                 <android.support.v4.widget.Space android:layout_width="5.0dip" android:layout_height="fill_parent" />
                 <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
