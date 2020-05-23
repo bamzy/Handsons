@@ -1,0 +1,124 @@
+package android.support.v4.app;
+
+import android.content.Context;
+import android.os.Bundle;
+import android.support.annotation.IdRes;
+import android.support.annotation.RestrictTo;
+import android.support.annotation.StringRes;
+import android.view.View;
+import java.io.FileDescriptor;
+import java.io.PrintWriter;
+import java.util.List;
+
+public abstract class FragmentManager {
+  public static final int POP_BACK_STACK_INCLUSIVE = 1;
+  
+  public static void enableDebugLogging(boolean paramBoolean) {
+    FragmentManagerImpl.DEBUG = paramBoolean;
+  }
+  
+  public abstract void addOnBackStackChangedListener(OnBackStackChangedListener paramOnBackStackChangedListener);
+  
+  public abstract FragmentTransaction beginTransaction();
+  
+  public abstract void dump(String paramString, FileDescriptor paramFileDescriptor, PrintWriter paramPrintWriter, String[] paramArrayOfString);
+  
+  public abstract boolean executePendingTransactions();
+  
+  public abstract Fragment findFragmentById(@IdRes int paramInt);
+  
+  public abstract Fragment findFragmentByTag(String paramString);
+  
+  public abstract BackStackEntry getBackStackEntryAt(int paramInt);
+  
+  public abstract int getBackStackEntryCount();
+  
+  public abstract Fragment getFragment(Bundle paramBundle, String paramString);
+  
+  @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
+  public abstract List<Fragment> getFragments();
+  
+  public abstract boolean isDestroyed();
+  
+  @Deprecated
+  @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
+  public FragmentTransaction openTransaction() {
+    return beginTransaction();
+  }
+  
+  public abstract void popBackStack();
+  
+  public abstract void popBackStack(int paramInt1, int paramInt2);
+  
+  public abstract void popBackStack(String paramString, int paramInt);
+  
+  public abstract boolean popBackStackImmediate();
+  
+  public abstract boolean popBackStackImmediate(int paramInt1, int paramInt2);
+  
+  public abstract boolean popBackStackImmediate(String paramString, int paramInt);
+  
+  public abstract void putFragment(Bundle paramBundle, String paramString, Fragment paramFragment);
+  
+  public abstract void registerFragmentLifecycleCallbacks(FragmentLifecycleCallbacks paramFragmentLifecycleCallbacks, boolean paramBoolean);
+  
+  public abstract void removeOnBackStackChangedListener(OnBackStackChangedListener paramOnBackStackChangedListener);
+  
+  public abstract Fragment.SavedState saveFragmentInstanceState(Fragment paramFragment);
+  
+  public abstract void unregisterFragmentLifecycleCallbacks(FragmentLifecycleCallbacks paramFragmentLifecycleCallbacks);
+  
+  public static interface BackStackEntry {
+    CharSequence getBreadCrumbShortTitle();
+    
+    @StringRes
+    int getBreadCrumbShortTitleRes();
+    
+    CharSequence getBreadCrumbTitle();
+    
+    @StringRes
+    int getBreadCrumbTitleRes();
+    
+    int getId();
+    
+    String getName();
+  }
+  
+  public static abstract class FragmentLifecycleCallbacks {
+    public void onFragmentActivityCreated(FragmentManager param1FragmentManager, Fragment param1Fragment, Bundle param1Bundle) {}
+    
+    public void onFragmentAttached(FragmentManager param1FragmentManager, Fragment param1Fragment, Context param1Context) {}
+    
+    public void onFragmentCreated(FragmentManager param1FragmentManager, Fragment param1Fragment, Bundle param1Bundle) {}
+    
+    public void onFragmentDestroyed(FragmentManager param1FragmentManager, Fragment param1Fragment) {}
+    
+    public void onFragmentDetached(FragmentManager param1FragmentManager, Fragment param1Fragment) {}
+    
+    public void onFragmentPaused(FragmentManager param1FragmentManager, Fragment param1Fragment) {}
+    
+    public void onFragmentPreAttached(FragmentManager param1FragmentManager, Fragment param1Fragment, Context param1Context) {}
+    
+    public void onFragmentResumed(FragmentManager param1FragmentManager, Fragment param1Fragment) {}
+    
+    public void onFragmentSaveInstanceState(FragmentManager param1FragmentManager, Fragment param1Fragment, Bundle param1Bundle) {}
+    
+    public void onFragmentStarted(FragmentManager param1FragmentManager, Fragment param1Fragment) {}
+    
+    public void onFragmentStopped(FragmentManager param1FragmentManager, Fragment param1Fragment) {}
+    
+    public void onFragmentViewCreated(FragmentManager param1FragmentManager, Fragment param1Fragment, View param1View, Bundle param1Bundle) {}
+    
+    public void onFragmentViewDestroyed(FragmentManager param1FragmentManager, Fragment param1Fragment) {}
+  }
+  
+  public static interface OnBackStackChangedListener {
+    void onBackStackChanged();
+  }
+}
+
+
+/* Location:              C:\Workspace\Handsons\Drone\original-drms-app-dex2jar.jar!\android\support\v4\app\FragmentManager.class
+ * Java compiler version: 6 (50.0)
+ * JD-Core Version:       1.1.3
+ */
