@@ -13,11 +13,11 @@
         <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/splash5" android:minWidth="80.0dip" android:minHeight="80.0dip" />
     </LinearLayout>
     <LinearLayout android:gravity="center|top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.5">
-        <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="#ffefefef" android:id="@id/logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="DRMS FLY" android:alpha="255.0" />
+        <TextView android:textSize="40.0dip" android:textStyle="bold" android:textColor="#ffefefef" android:id="@id/logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="پهپاد زارع" android:alpha="255.0" />
     </LinearLayout>
     <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
         <TextView android:textSize="15.0dip" android:textStyle="bold" android:textColor="#ffefefef" android:layout_gravity="bottom|center|left" android:id="@id/version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginBottom="7.0dip" android:text="v0.0.0" />
         <LinearLayout android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0" />
-        <TextView android:textSize="15.0dip" android:textStyle="bold" android:textColor="#ffefefef" android:layout_gravity="bottom|center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_marginBottom="7.0dip" android:text="made by Bamzy" />
+        <TextView android:textSize="15.0dip" android:textStyle="bold" android:textColor="#ffefefef" android:layout_gravity="bottom|center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_marginBottom="7.0dip" android:text="Made by Zare Co." />
     </LinearLayout>
 </LinearLayout>

@@ -2071,7 +2071,7 @@
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 230
-    const-string v2, "Disconnected"
+    const-string v2, "قطع شده"
 
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->getWidth()I
 
@@ -2120,7 +2120,7 @@
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 235
-    const-string v2, "Disconnected"
+    const-string v2, "قطع شده"
 
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->getWidth()I
 
@@ -2169,7 +2169,7 @@
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 241
-    const-string v2, "Disconnected"
+    const-string v2, "قطع شده"
 
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->getWidth()I
 

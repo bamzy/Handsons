@@ -128,7 +128,7 @@
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 60
-    const-string v0, "Information"
+    const-string v0, "اطلاعات"
 
     iget-object v1, p0, Lcom/drms/drms_drone/MainView/EtcView;->mPaint:[Landroid/graphics/Paint;
 

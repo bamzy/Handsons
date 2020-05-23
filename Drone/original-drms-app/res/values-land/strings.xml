@@ -33,7 +33,7 @@
     <string name="abc_font_family_menu_material">sans-serif</string>
     <string name="abc_font_family_subhead_material">sans-serif</string>
     <string name="abc_font_family_title_material">sans-serif-medium</string>
-    <string name="app_name">Sadegh</string>
+    <string name="app_name">پهپاد زارع</string>
     <string name="button_scan">Scan for devicees</string>
     <string name="close_drawer">close drawer</string>
     <string name="none_found" />
@@ -41,7 +41,7 @@
     <string name="open_drawer">open drawer</string>
     <string name="scanning">scanning for devices...</string>
     <string name="select_device">select a device to connect</string>
-    <string name="settingWarning">ooooo드론 설정을 임의로 변경 시, 비행에 치명적인 문제가 발생할 수 있습니다.</string>
+    <string name="settingWarning"></string>
     <string name="title_other_devices">Other Available Devices</string>
     <string name="title_paired_devices">Paired Devices</string>
 </resources>

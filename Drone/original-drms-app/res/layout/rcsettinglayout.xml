@@ -65,22 +65,22 @@
                     <EditText android:textSize="14.0dip" android:textColor="@color/mulSettingText" android:gravity="center" android:id="@id/vbat_scale" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:ems="10" android:layout_weight="1.0" android:inputType="number" android:imeOptions="flagNoExtractUi" />
                 </LinearLayout>
                 <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
-                    <TextView android:textSize="14.0dip" android:textColor="@color/mainTextColor" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50.0dip" android:text="현재 전압" android:layout_weight="1.0" />
+                    <TextView android:textSize="14.0dip" android:textColor="@color/mainTextColor" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50.0dip" android:text="Current Voltage" android:layout_weight="1.0" />
                     <android.support.v4.widget.Space android:layout_width="3.0dip" android:layout_height="fill_parent" />
                     <EditText android:textSize="14.0dip" android:textColor="@color/mainTextColor" android:gravity="center" android:id="@id/current_vbat" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.0" android:ems="10" android:layout_weight="1.0" android:inputType="numberDecimal" />
                 </LinearLayout>
                 <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
-                    <TextView android:textSize="14.0dip" android:textColor="@color/mulSettingContent" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50.0dip" android:text="1단계 경고" android:layout_weight="1.0" />
+                    <TextView android:textSize="14.0dip" android:textColor="@color/mulSettingContent" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50.0dip" android:text="1Level Warning" android:layout_weight="1.0" />
                     <android.support.v4.widget.Space android:layout_width="3.0dip" android:layout_height="fill_parent" />
                     <EditText android:textSize="14.0dip" android:gravity="center" android:id="@id/vbat_warning1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.0" android:ems="10" android:layout_weight="1.0" android:inputType="numberDecimal" android:imeOptions="flagNoExtractUi" />
                 </LinearLayout>
                 <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
-                    <TextView android:textSize="14.0dip" android:textColor="@color/mulSettingContent" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50.0dip" android:text="2단계 경고" android:layout_weight="1.0" />
+                    <TextView android:textSize="14.0dip" android:textColor="@color/mulSettingContent" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50.0dip" android:text="2Level Warning" android:layout_weight="1.0" />
                     <android.support.v4.widget.Space android:layout_width="3.0dip" android:layout_height="fill_parent" />
                     <EditText android:textSize="14.0dip" android:textColor="@color/mulSettingText" android:gravity="center" android:id="@id/vbat_warning2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.0" android:ems="10" android:layout_weight="1.0" android:inputType="numberDecimal" android:imeOptions="flagNoExtractUi" />
                 </LinearLayout>
                 <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
-                    <TextView android:textSize="14.0dip" android:textColor="@color/mulSettingContent" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50.0dip" android:text="3단계경고" android:layout_weight="1.0" />
+                    <TextView android:textSize="14.0dip" android:textColor="@color/mulSettingContent" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50.0dip" android:text="3Level Warning" android:layout_weight="1.0" />
                     <android.support.v4.widget.Space android:layout_width="3.0dip" android:layout_height="fill_parent" />
                     <EditText android:textSize="14.0dip" android:textColor="@color/mulSettingText" android:gravity="center" android:id="@id/vbat_warning3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.0" android:ems="10" android:layout_weight="1.0" android:inputType="numberDecimal" android:imeOptions="flagNoExtractUi" />
                 </LinearLayout>
