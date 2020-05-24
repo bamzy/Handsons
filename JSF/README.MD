@@ -45,3 +45,6 @@ If the local value is invalid, JSF adds an error message to the FacesContext ins
     * custom objects, components, custom tags and validators
     
 ![picture 5](./images/30c53ab73f477b66b2bf5cdcacc32c1885141d353713dea35c58729d573d0670.png)  
+
+
+* xhtml is HTML page with special JSF tags
