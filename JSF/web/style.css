@@ -4,6 +4,9 @@
 }
 
 .submit_button {
-    color: aquamarine;
+    color: blue;
     font-size: medium;
+}
+.error {
+    color: red;
 }

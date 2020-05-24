@@ -6,23 +6,41 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
-    <title>hiii</title>
+    <title>First JSF App Ever</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
 
 </h:head>
 <h:body>
+
     <h:form id="form">
-        <h:outputLabel>First Name</h:outputLabel>
-        <h:inputText id="firstName" placeholder="First Name" value="#{person.firstName}"/>
+        <h:outputLabel>First Name </h:outputLabel>
+        <h:inputText id="firstName" required="true" value="#{person.firstName}" requiredMessage="Please enter your first name"/><br/>
+        <h:message for="firstName" styleClass="error" />
         <br/><br/>
-        <h:outputLabel>Last Name</h:outputLabel>
-        <h:inputText id="lastName" placeholder="First Name" value="#{person.lastName}"/>
+        <h:outputLabel>Last Name </h:outputLabel>
+        <h:inputText id="lastName"  required="true" value="#{person.lastName}" requiredMessage="Please enter your last name"/><br/>
+        <h:message for="lastName" styleClass="error" />
         <br/><br/>
 
+        <h:outputLabel>Email </h:outputLabel>
+        <h:inputText id="email" value="#{person.email}" required="true" requiredMessage="Please enter a valid email"/><br/>
+        <h:message for="email" styleClass="error" />
+        <br/><br/>
+
+        <h:outputLabel>Age </h:outputLabel>
+        <h:inputText id="age" value="#{person.age}" required="true" requiredMessage="Please enter a valid age" >
+            <f:validateLongRange minimum="1" maximum="40"/>
+            <f:validateRegex pattern="{d}3"/>
+        </h:inputText><br/>
+        <h:message for="age" styleClass="error" />
+        <br/><br/>
+
+
+        <h:outputLabel>Favorite Country: </h:outputLabel>
         <h:selectManyCheckbox value="#{person.manyCheckbox}">
             <f:selectItems  value="#{person.countryList}" />
         </h:selectManyCheckbox>
-
+        <h:outputLabel>Favorite Language: </h:outputLabel>
         <h:selectOneRadio value="#{person.favoriteLanguage}">
             <f:selectItem itemValue="1" itemLabel="Farsi"/>
             <f:selectItem itemValue="2" itemLabel="English"/>

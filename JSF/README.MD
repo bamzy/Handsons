@@ -64,3 +64,12 @@ If the local value is invalid, JSF adds an error message to the FacesContext ins
         <f:selectItem itemValue="2" itemLabel="Canada"/>
 </h:selectManyCheckbox>
 ``` 
+* Validation
+```xhtml
+
+<h:inputText id="age" value="#{person.age}" required="true" requiredMessage="Please enter a valid age" >
+            <f:validateLongRange minimum="1" maximum="40"/>
+            <f:validateRegex pattern="{d}3"/>
+</h:inputText>
+<h:message for="age" styleClass="error" />
+```

@@ -12,8 +12,10 @@ public class Person {
     String[] manyCheckbox;
     ArrayList<String> countryList;
     String favoriteLanguage;
+    String email;
 
     int countryCode;
+    private int age;
 
     public Person() {
         countryList = new ArrayList<>();
@@ -69,5 +71,21 @@ public class Person {
 
     public void setFavoriteLanguage(String favoriteLanguage) {
         this.favoriteLanguage = favoriteLanguage;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }
