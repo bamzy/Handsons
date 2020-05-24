@@ -7,11 +7,17 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
     <title>First JSF App Ever</title>
-    <link rel="stylesheet" type="text/css" href="resources/css/style.css"/>
+    <h:outputStylesheet library="css" name="style.css"/>
 
 </h:head>
 <h:body>
-
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1>Dummy University</h1>
+            <p>Please Sign up</p>
+            <button>Rate Us</button>
+        </div>
+    </div>
     <h:form id="form">
         <h:outputLabel>First Name </h:outputLabel>
         <h:inputText id="firstName" required="true" value="#{person.firstName}" requiredMessage="Please enter your first name"/><br/>
