@@ -51,3 +51,16 @@ If the local value is invalid, JSF adds an error message to the FacesContext ins
 * The **JSF expression language** is used to
     * access properties of a managed bean
     * and some extra logic
+ * @ManageBean classes need to have an **empty constructor** in addition to **getters/setters**
+ 
+ 
+ 
+ ## Dev Notes:
+ * selectManyCheckbox needs an array while selectOneMenu does not
+ ```html
+<h:selectManyCheckbox value="#{person.manyCheckbox}">
+        <f:selectItem itemValue="0" itemLabel="Brazil"/>
+        <f:selectItem itemValue="1" itemLabel="Iran"/>
+        <f:selectItem itemValue="2" itemLabel="Canada"/>
+</h:selectManyCheckbox>
+``` 

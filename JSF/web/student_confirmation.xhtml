@@ -6,6 +6,13 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <f:view>
-    <h:outputLabel value="Full Name Was: #{student.firstName} #{student.lastName} "/>
+    <h:outputLabel value="Full Name Was: #{person.firstName} #{person.lastName}, Country Code: #{person.countryCode} } "/>
+<br/>
+<br/>
+<br/>
+    Multichoice
+    <ui:repeat value="#{person.manyCheckbox}" var="temp">
+        <li>#{temp}</li>
+    </ui:repeat>
 </f:view>
 </html>
