@@ -48,3 +48,6 @@ If the local value is invalid, JSF adds an error message to the FacesContext ins
 
 
 * xhtml is HTML page with special JSF tags
+* The **JSF expression language** is used to
+    * access properties of a managed bean
+    * and some extra logic
