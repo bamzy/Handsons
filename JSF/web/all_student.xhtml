@@ -7,11 +7,18 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
     <title>First JSF App Ever</title>
-    <link rel="stylesheet" type="text/css" href="resources/css/style.css"/>
+   <h:outputStylesheet library="css" name="style.css"/>
 
 </h:head>
 <h:body>
+    <h:outputLabel value="Applied Students: "/>
+    <h:dataTable value="#{person.countryList}" var="item" border="1">
+        <h:column>
+            <f:facet name="Name">Country Name</f:facet>
+            #{item}
 
-    <h:outputText value="No Student Was Found"/>
+        </h:column>
+    </h:dataTable>
+
 </h:body>
 </html>

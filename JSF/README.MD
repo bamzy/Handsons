@@ -78,3 +78,8 @@ If the local value is invalid, JSF adds an error message to the FacesContext ins
 ```html
 <h:commandButton styleClass="submit_button" action="#{person.handleResponse()}" value="Submit"/>
 ```
+
+* ManageBean Scopes
+1- Request Scope: per web request
+2- Session Scope: per user 
+3- Application Scope: Shared by all users
