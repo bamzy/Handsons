@@ -18,20 +18,17 @@
         <h:outputLabel>Last Name</h:outputLabel>
         <h:inputText id="lastName" placeholder="First Name" value="#{person.lastName}"/>
         <br/><br/>
-        <h:selectOneMenu value="#{person.countryCode}">
-            <f:selectItems  value="#{person.countryList}" />
-        </h:selectOneMenu>
 
         <h:selectManyCheckbox value="#{person.manyCheckbox}">
             <f:selectItems  value="#{person.countryList}" />
         </h:selectManyCheckbox>
 
-        <h:commandButton action="student_confirmation" value="Submit"/>
-<!--        <h:selectOneRadio value="#{person.favoriteLanguage}">-->
-<!--            <f:selectItem itemValue="1" itemLabel="Farsi"/>-->
-<!--            <f:selectItem itemValue="2" itemLabel="English"/>-->
+        <h:selectOneRadio value="#{person.favoriteLanguage}">
+            <f:selectItem itemValue="1" itemLabel="Farsi"/>
+            <f:selectItem itemValue="2" itemLabel="English"/>
 
-<!--        </h:selectOneRadio>-->
+        </h:selectOneRadio>
+        <h:commandButton styleClass="submit_button" action="student_confirmation" value="Submit"/>
     </h:form>
 </h:body>
 </html>

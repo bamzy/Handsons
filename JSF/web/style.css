@@ -2,3 +2,8 @@
     padding: 10px 10px;
     border: 2px solid #eeeeee;
 }
+
+.submit_button {
+    color: aquamarine;
+    font-size: medium;
+}
