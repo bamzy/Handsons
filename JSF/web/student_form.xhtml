@@ -30,7 +30,6 @@
         <h:outputLabel>Age </h:outputLabel>
         <h:inputText id="age" value="#{person.age}" required="true" requiredMessage="Please enter a valid age" >
             <f:validateLongRange minimum="1" maximum="40"/>
-            <f:validateRegex pattern="{d}3"/>
         </h:inputText><br/>
         <h:message for="age" styleClass="error" />
         <br/><br/>
@@ -46,7 +45,7 @@
             <f:selectItem itemValue="2" itemLabel="English"/>
 
         </h:selectOneRadio>
-        <h:commandButton styleClass="submit_button" action="student_confirmation" value="Submit"/>
+        <h:commandButton styleClass="submit_button" action="#{person.handleResponse()}" value="Submit"/>
     </h:form>
 </h:body>
 </html>

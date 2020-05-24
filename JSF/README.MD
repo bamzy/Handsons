@@ -73,3 +73,8 @@ If the local value is invalid, JSF adds an error message to the FacesContext ins
 </h:inputText>
 <h:message for="age" styleClass="error" />
 ```
+
+* Call ManagedBean methods
+```html
+<h:commandButton styleClass="submit_button" action="#{person.handleResponse()}" value="Submit"/>
+```

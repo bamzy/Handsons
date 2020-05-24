@@ -88,4 +88,11 @@ public class Person {
     public void setAge(int age) {
         this.age = age;
     }
+
+    public String handleResponse() {
+        if (this.firstName.equalsIgnoreCase("bamdad"))
+            return "student_not_found";
+        else
+            return "student_confirmation";
+    }
 }
