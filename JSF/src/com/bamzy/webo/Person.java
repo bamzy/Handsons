@@ -1,11 +1,14 @@
 package com.bamzy.webo;
 
+import com.bamzy.controller.PersonController;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+import javax.faces.bean.SessionScoped;
 import java.util.ArrayList;
 
 @ManagedBean (name = "person")
-@RequestScoped
+@SessionScoped
 public class Person {
     String firstName;
     String lastName;
@@ -91,6 +94,9 @@ public class Person {
     }
 
     public String handleResponse() {
+        PersonController personController = new PersonController();
+        personController.loadPersons();
+
         if (this.firstName.equalsIgnoreCase("bamdad"))
             return "student_not_found";
         else

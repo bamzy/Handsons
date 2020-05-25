@@ -33,5 +33,6 @@
     <orderEntry type="library" name="Mojarra-2.2.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.5.55" level="application_server_libraries" />
     <orderEntry type="library" name="Hibernate 5.4.11-5.4.11" level="project" />
+    <orderEntry type="library" name="mysql:mysql-connector-java:8.0.20" level="application" />
   </component>
 </module>
