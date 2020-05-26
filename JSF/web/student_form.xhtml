@@ -34,8 +34,9 @@
         <br/><br/>
 
         <h:outputLabel>Age </h:outputLabel>
-        <h:inputText id="age" value="#{person.age}" required="true" requiredMessage="Please enter a valid age" >
+        <h:inputText id="age" value="#{person.age}" required="true" requiredMessage="Please enter a valid age"  vali>
             <f:validateLongRange minimum="1" maximum="40"/>
+            <f:validateLength min
         </h:inputText><br/>
         <h:message for="age" styleClass="error" />
         <br/><br/>
