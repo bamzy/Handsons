@@ -5,6 +5,7 @@ app.get("/", (req, res) =>
     res.sendFile(__dirname + "/index.html"));
 
 io.on('connection', (socket) => {
+    io.emit('broadcast','welcom to Our Group');
     socket.on('chat message', (msg) => {
         io.emit('chat message', msg);
       });
