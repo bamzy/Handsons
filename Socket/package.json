@@ -2,7 +2,9 @@
     "name": "socket-chat",
     "version": "0.0.1",
     "description": "A basic socket.io app",
-    "dependencies": {},
+    "dependencies": {
+        "ws": "^7.3.0"
+    },
     "devDependencies": {
         "express": "^4.17.1",
         "nodemon": "^2.0.4",

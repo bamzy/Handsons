@@ -1,0 +1,12 @@
+<script>
+    let ws = new WebSocket('ws://localhost:8000');
+    console.log(ws);
+
+    ws.onmessage = (event) => {
+        console.log(event.data  );
+    }
+
+    ws.onopen = (event) => {
+        ws.send('Im happy to be connected you');
+    }
+</script>
