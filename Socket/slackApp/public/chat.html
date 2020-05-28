@@ -1,7 +1,10 @@
 <!doctype html>
 <html>
   <head>
-    <title>Socket.IO chat</title>
+    <link rel="icon" 
+      type="image/png" 
+      href="icon.png">
+    <title>BamApp</title>
     
   </head>
   <body>
@@ -18,34 +21,7 @@
     </form>
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script>
-        $(function () {
-          var socket = io();
-          $('form').submit(function(e){
-            e.preventDefault(); // prevents page reloading
-            socket.emit('chat message', $('#m').val());
-            $('#m').val('');
-            $('#infoMessage').text('...');
-            return false;
-          });
-          socket.on('chat message', function(msg){
-            $('#messages').append($('<li>').text(msg));
-          });
-          socket.on('typing status', function(msg){
-            $('#infoMessage').text(msg);
-        });
-        
-        $('#m').keydown(function (e){
-            socket.emit("typing status",true)
-        });
-        $('#m').keyup(function (e){
-            socket.emit("typing status",false)
-        });
-        socket.on('broadcastFromServer', function(msg){
-            $('#infoMessage').text(msg);
-
-          });
-        });
-      </script>
+    <script src="./scripts.js"></script>
+    
   </body>
 </html>
