@@ -75,4 +75,10 @@ const PERSON = array('me','you','them');
 Define('OFFICE',array(1,2,3,4));
 echo json_encode(PERSON,JSON_PRETTY_PRINT) ;
 echo json_encode(OFFICE,JSON_PRETTY_PRINT) ;
-array_push(OFFICE,'9');
+
+function manip(array &$arr){
+    $arr[0] = 2;
+}
+$var  = array(1,2,3,4,5,6);
+manip($var);
+echo 'New Val is:'. $var[0];
