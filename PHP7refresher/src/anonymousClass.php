@@ -1,7 +1,9 @@
 <?php
+namespace  dummy\anonymouseClass;
 //This is how frameworks are created!!!
 //The class is created only one and can even have a constructor
-// An anonymous class can event inherit
+// An anonymous class can extend other classes or implement interfaces
+const AAA = 32;
 class root{
     public $rootVal = 19;
 }
@@ -22,5 +24,16 @@ $framework = new class(18) extends root{
 
 };
 
-$framework->print();
-$framework::test();
+//$framework->print();
+//$framework::test();
+
+//How to change context of a function by using the call method
+$context = function() {
+    echo $this->var;
+};
+//$context();
+
+class test{
+    public $var = 99;
+}
+//$context->call(new test() );

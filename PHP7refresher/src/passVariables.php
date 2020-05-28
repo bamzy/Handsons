@@ -75,3 +75,4 @@ const PERSON = array('me','you','them');
 Define('OFFICE',array(1,2,3,4));
 echo json_encode(PERSON,JSON_PRETTY_PRINT) ;
 echo json_encode(OFFICE,JSON_PRETTY_PRINT) ;
+array_push(OFFICE,'9');
