@@ -1,11 +1,13 @@
-const app = require("express")();
-const http = require("http").createServer(app);
-const io = require("socket.io")(http);
-app.get("/", (req, res) =>
-    res.sendFile(__dirname + "/index.html"));
+const express = require("express");
+const app = express();
+const socketio = require("socket.io");
 
+app.use(express.static(__dirname+'/public'))
+
+const expressServer = app.listen(8000);
+const io = socketio(expressServer);
 io.on('connection', (socket) => {
-    io.emit('broadcast','Welcom to Our Group');
+    io.emit('broadcastFromServer','Welcom to Our Group');
     socket.on('chat message', (msg) => {
         io.emit('chat message', msg);
       });
@@ -15,6 +17,4 @@ io.on('connection', (socket) => {
             else
             socket.broadcast.emit('typing status', "...");
     });
-});
-    
-http.listen(3000, () => console.log("listening on http://localhost:3000"));
+});  
