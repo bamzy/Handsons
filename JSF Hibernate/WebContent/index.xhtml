@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" http-equiv="X-UA-Conpatible" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />    
+    <title>JSF Hibernate</title>
+    <style type="text/css">
+    	.btnPos {
+    		margin: 12px;
+    	}
+    	.marginLeft12 {
+    		margin-left: 12px;
+    	}
+    	.successText {
+    		padding-left: 22px;
+    		font-weight: bold;
+    		color: green;
+    	}
+    	.stud-table {
+			border-collapse: collapse;
+		}
+		.stud-table-header {
+			text-align: center;
+			background: none repeat scroll 0 0 #E5E5E5;
+			border-bottom: 1px solid #BBBBBB;
+			padding: 2px;
+		}
+		.stud-table-row {
+			padding: 12px;
+    		text-align: center;
+		}
+    </style>
+</h:head>
+<h:body>
+    <center><h2>JSF Hibernate Crud Example</h2></center>
+    <!-- New Student Form -->
+    <h3 class="marginLeft12">1. New Student Form</h3>
+    <h:form id="studentSaveForm" styleClass="form-horizontal">    	
+        <h:panelGrid columns="2">        	
+        	<div class="form-group">
+            	<h:outputLabel value="Id:" styleClass="control-label" />
+            	<div class="col-xs-10">	
+            		<h:inputText value="#{student.id}" styleClass="form-control" />
+            	</div> 
+            </div>
+            <div class="form-group">
+            	<h:outputLabel value="Name:" styleClass="control-label" />
+            	<div class="col-xs-10">
+            		<h:inputText value="#{student.name}" styleClass="form-control" /> 
+            	</div> 
+            </div>
+            <div class="form-group">
+            	<h:outputLabel value="Department:" styleClass="control-label" />
+            	<div class="col-xs-10">	
+            		<h:inputText value="#{student.department}" styleClass="form-control" />
+            	</div> 
+            </div>
+            <div class="form-group">
+        		<div class="col-xs-offset-2 col-xs-10">
+            		<h:commandButton value="Save Record" action="#{student.saveStudentRecord}" styleClass="btn btn-primary btn-sm btnPos" />
+            	</div>
+            </div>
+        </h:panelGrid>
+        <h:outputText id="saveResult" rendered="#{not empty createdStudentId}" value="!! Student Record Saved In Database !!" styleClass="successText" />
+    </h:form>
+    <br /><br />
+    
+    <!-- Form In Order To Delete A Particular Student -->
+    <h3  class="marginLeft12">2. Delete Student Record</h3>
+    <h:form id="deleteStudentById" styleClass="form-horizontal">
+        <h:panelGrid columns="2">
+        	<div class="form-group">
+            	<h:outputLabel value="Id:" styleClass="control-label" />
+            	<div class="col-xs-10">	
+            		<h:inputText value="#{student.id}" styleClass="form-control" />
+            	</div> 
+            </div>
+           <div class="form-group">
+        		<div class="col-xs-offset-2 col-xs-10">
+            		<h:commandButton value="Delete Student Record" action="#{student.deleteStudentRecord}" styleClass="btn btn-primary btn-sm btnPos" />
+            	</div>
+            </div>
+        </h:panelGrid>
+        <h:outputText id="deleteResult" rendered="#{not empty deletedStudentId}" value="!! Student Record Deleted From Database !!" styleClass="successText" />
+    </h:form>
+    <br /><br />
+
+	<!-- Form In Order To Show A Particular Student Details -->
+	<h3  class="marginLeft12">3. Find Student Record</h3>
+    <h:form id="showStudent">
+        <h:panelGrid columns="2">
+        	<div class="form-group">
+            	<h:outputLabel value="Id:" styleClass="control-label" />
+            	<div class="col-xs-10">	
+            		<h:inputText value="#{student.id}" styleClass="form-control" />
+            	</div> 
+            </div>
+            <div class="form-group">
+        		<div class="col-xs-offset-2 col-xs-10">
+            		<h:commandButton value="Show Student" action="#{student.getStudentDetailsById}" styleClass="btn btn-primary btn-sm btnPos" />
+            	</div>
+            </div>
+           <h:dataTable id="findStudentRecordDetails" rendered="#{not empty findStudentById}" value="#{student.studentList}" var="studList" styleClass="stud-table" headerClass="stud-table-header">
+           		<h:column>    				
+      				<f:facet name = "header">Name</f:facet><h:outputText value="#{studList.name}" styleClass="stud-table-row" />	      			
+   				</h:column>
+   				<h:column>
+      				<f:facet name = "header">Description</f:facet><h:outputText value="#{studList.department}" styleClass="stud-table-row" />	      			
+   				</h:column>
+           </h:dataTable>            	                         
+        </h:panelGrid>
+    </h:form>
+    <br /><br />
+
+	<!-- Form For Updating Existing Student Details -->
+	<h3  class="marginLeft12">4. Update Student Details</h3>
+    <h:form id="updateStudentRecord">
+        <h:panelGrid columns="2">
+        	<div class="form-group">
+            	<h:outputLabel value="Id:" styleClass="control-label" />
+            	<div class="col-xs-10">	
+            		<h:inputText value="#{student.id}" styleClass="form-control" />
+            	</div> 
+            </div>
+             <div class="form-group">
+        		<div class="col-xs-offset-2 col-xs-10">
+            		<h:commandButton value="Show Student" action="#{student.getStudentDetailsById}" styleClass="btn btn-primary btn-sm btnPos" />
+            	</div>
+            </div>   
+            <div class="form-group">
+            	<h:outputLabel value="Id:" styleClass="control-label" />
+            	<div class="col-xs-10">            		
+            		<h:inputText value="#{student.name}" styleClass="form-control"/>
+            	</div> 
+            </div>
+             <div class="form-group">
+            	<h:outputLabel value="Department:" styleClass="control-label" />
+            	<div class="col-xs-10">            		
+            		<h:inputText value="#{student.department}" styleClass="form-control"/>
+            	</div> 
+            </div>
+             <div class="form-group">
+        		<div class="col-xs-offset-2 col-xs-10">
+        			<h:commandButton value="Update Record" action="#{student.updateStudentDetails}" styleClass="btn btn-primary btn-sm btnPos" />
+        		</div>
+        	</div>        
+       </h:panelGrid>
+       <h:outputText id="updateResult" rendered="#{not empty updatedStudentRecord}" value="!! Student Record Updated In Database !!" styleClass="successText" />
+    </h:form>
+</h:body>
+</html>

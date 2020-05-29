@@ -83,3 +83,4 @@ If the local value is invalid, JSF adds an error message to the FacesContext ins
 1- Request Scope: per web request
 2- Session Scope: per user 
 3- Application Scope: Shared by all users
+![picture 1](../images/71cf6cb48cd05a9d4f2019a199dc37c2f9068d738dca3bcf872fd4348459f2f8.png)  
