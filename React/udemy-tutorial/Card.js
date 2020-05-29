@@ -1,4 +1,5 @@
-class Card extends React.Component{
+import React from 'react' ;
+class Card extends Component{
     render(){
     return (
             <div className="col s2">
@@ -14,7 +15,7 @@ class Card extends React.Component{
                         <a href="#">CAD 10.00</a>
                     </div>
                 </div>
-            </div>;
+            </div>);
     }
     
 }
