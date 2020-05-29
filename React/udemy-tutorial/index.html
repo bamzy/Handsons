@@ -1,65 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="icon" type="image/png" href="icon.png" />
-    <title>BamReact</title>
-    <script
-      crossorigin
-      src="https://unpkg.com/react@16/umd/react.development.js"
-    ></script>
-    <script
-      crossorigin
-      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
-    <!-- Compiled and minified CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-  </head>
-  <body>
+      <title>BamReact</title>
+      <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+      <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+      <script src="Card.js" type="text/bable"></script>
+      <link rel="icon" type="image/png" href="icon.png" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+</head>
+<body>
     <div id="root"></div>
+    
     <script type="text/babel">
-      const imageCard = 
-        <div className="row">
-            <div className="col s2">
-                <div className="card hoverable small">
-                    <div className="card-image">
-                        <img src="http://sipi.usc.edu/database/preview/misc/4.1.03.png" />
-                    </div>
-                    <div className="card-content">
-                        <p>This is the first line</p>
-                        <p>This is the second</p>
-                    </div>
-                    <div className="card-action">
-                        <a href="#">CAD 10.00</a>
-                    </div>
-                </div>
-            </div>
-        </div>;
-
-
-        const imageCard2 = /*#__PURE__*/
-React.createElement("div", {
-  className: "row"
-}, /*#__PURE__*/React.createElement("div", {
-  className: "col s2"
-}, /*#__PURE__*/React.createElement("div", {
-  className: "card hoverable small"
-}, /*#__PURE__*/React.createElement("div", {
-  className: "card-image"
-}, /*#__PURE__*/React.createElement("img", {
-  src: "http://sipi.usc.edu/database/preview/misc/4.1.03.png"
-})), /*#__PURE__*/React.createElement("div", {
-  className: "card-content"
-}, /*#__PURE__*/React.createElement("p", null, "This is the first line"), /*#__PURE__*/React.createElement("p", null, "This is the second")), /*#__PURE__*/React.createElement("div", {
-  className: "card-action"
-}, /*#__PURE__*/React.createElement("a", {
-  href: "#"
-}, "CAD 10.00")))));
-      
-      ReactDOM.render(imageCard2, document.getElementById("root"));
+      ReactDOM.render(<Card />, document.getElementById("root"));
     </script>
   </body>
 </html>
