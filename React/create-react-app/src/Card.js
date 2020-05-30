@@ -17,8 +17,7 @@ class Card extends Component {
             this.activeFlag = true;
       }
       render(){
-            return <div className="col s2" >
-                 <div className="card hoverable small">
+            return <div className="card hoverable small">
                      <div className="card-image">
                          <img src={this.props.card.pixel} />
                      </div>
@@ -28,9 +27,9 @@ class Card extends Component {
                      </div>
                      <div className="card-action">
                          <a href="#">CAD {this.props.card.price}</a>
-                         <button onClick={()=>{this.handleBuy()}} id="resBtn" className='btn waves-light waves-effect'>{this.state.btnName}</button>
+                         
                      </div>
-                 </div>
+                 
              </div>;
       }
 }
