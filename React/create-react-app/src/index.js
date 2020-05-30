@@ -2,11 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import CardSet from './CardSet';
-import data from './data'
+
 import * as serviceWorker from './serviceWorker';
 ReactDOM.render(  
-    <CardSet cards={data} />,
+    <App />,
   document.getElementById('root')
 );
 

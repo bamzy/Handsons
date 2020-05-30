@@ -5,11 +5,15 @@ class CardSet extends Component{
       constructor(){
             super();
             this.state = {
-                  chosenCards: {}
+                  chosenCards: []
             }
       }
       handleBuy = (i)=>{
-            console.log('buy clicked '+i);
+            const newChosenCards = [...this.state.chosenCards];
+            newChosenCards.push(i);
+            this.setState({
+                  chosenCards : newChosenCards
+            })
       }
       render(){
             const cardList = this.props.cards.map((card,i)=>{
