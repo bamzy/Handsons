@@ -3,18 +3,36 @@ class Card extends React.Component{
     constructor(){
         super();
         this.state = {
-            name : 'Sold Out'
+            btnName: 'Reserve',
+            name : 'Sold Out',
+            backgroundColor: '#ff99ca'
         };
-        setInterval(()=>{
-            this.setState({name: 'Available'})
+        setTimeout(()=>{
+            this.setState({
+                name: 'Available', 
+                backgroundColor: '#84e8a5'
+            })
         },5000);
     }
+    stat = true;
     handleReserve= ()=>{
-        this.setState({name: "Reserved"});
+        console.log(this.stat)
+        this.stat = !this.stat;
+        this.setState({
+            btnName : 'Reserved',
+            name: 'Reserved', 
+            backgroundColor: '#849fe8'
+        })
     }
     render(){
+        const styles = {
+            containerStyle: {
+              backgroundColor: this.state.backgroundColor,
+            }
+          };
+          const { containerStyle } = styles;
     return <div className="col s2">
-                 <div className="card hoverable small">
+                 <div className="card hoverable small" style={{backgroundColor: this.state.backgroundColor}}>
                      <div className="card-image">
                          <img src={this.props.data.pixel} />
                      </div>
@@ -24,7 +42,7 @@ class Card extends React.Component{
                      </div>
                      <div className="card-action">
                          <a href="#">CAD {this.props.data.price}</a>
-                         <button id="resBtn" className='btn' onClick={this.handleReserve}>Rserve</button>
+                         <button id="resBtn" className='btn' onClick={this.handleReserve}>{this.state.btnName}</button>
                      </div>
                  </div>
              </div>;
