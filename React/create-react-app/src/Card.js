@@ -19,14 +19,14 @@ class Card extends Component {
       render(){
             return <div className="card hoverable small">
                      <div className="card-image">
-                         <img src={this.props.card.pixel} />
+                         <img src={this.props.card.profile_image} />
                      </div>
                      <div className="card-content">
-                         <h3>{this.props.card.name}</h3>
-                         <p>{this.props.card.name}</p>
+                         <p>{this.props.card.employee_name}</p>
+                         <p>{this.props.card.employee_age}</p>
                      </div>
                      <div className="card-action">
-                         <a href="#">CAD {this.props.card.price}</a>
+                         <a href="#">CAD {this.props.card.employee_salary}</a>
                          
                      </div>
                  

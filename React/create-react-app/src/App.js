@@ -1,12 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
-import data from './data'
-import CardSet from './CardSet';
 
-function App() {
+import data from './data';
+import EmployeeCardSet from './EmployeeCardSet';
+
+class App extends Component {
+  constructor(){
+    super();
+  }
+  
+  
+  render(){
   return (
-    <CardSet cards={data} />);
+    <EmployeeCardSet />
+    );
+  }
 }
 
 export default App;
