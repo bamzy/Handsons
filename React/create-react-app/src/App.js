@@ -3,6 +3,7 @@ import './App.css';
 
 import data from './data';
 import EmployeeCardSet from './EmployeeCardSet';
+import WeatherCardSet from './WeatherCardSet';
 
 class App extends Component {
   constructor(){
@@ -12,7 +13,7 @@ class App extends Component {
   
   render(){
   return (
-    <EmployeeCardSet />
+    <WeatherCardSet />
     );
   }
 }

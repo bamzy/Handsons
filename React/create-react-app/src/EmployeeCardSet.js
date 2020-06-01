@@ -16,21 +16,18 @@ class EmployeeCardSet extends Component{
             axios.get(url).then((resp)=>{
             // console.log(resp.data.data)
               this.setState({
-                  cards: [resp.data.data]
+                  cards: resp.data.data
               });
             });
           }
      
       render(){
-            let cardList;
-            if (Array.isArray(this.state.cards[0])){
-                  cardList = this.state.cards[0].map((card,i)=>{
-                        return <div className="col s2" key={i}>                        
-                              <EmployeeCard card={card}  />
-                              
-                              </div>;
-                  });
-            }
+            const cardList = this.state.cards[0].map((card,i)=>{
+                  return <div className="col s2" key={i}>                        
+                        <EmployeeCard card={card}  />
+                        
+                        </div>;
+            });
             return <div className='row'> <h1>Our Collection:</h1>{cardList}</div>
       }
 }
