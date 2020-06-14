@@ -26,7 +26,8 @@ class WeatherCardSet extends Component{
             axios.get(url).then((resp)=>{
               this.setState({
                   info: resp.data,
-                  name: resp.data.name
+                  name: resp.data.name,
+                  temp: resp.data.main.temp
               });
             });
       }
@@ -34,11 +35,18 @@ class WeatherCardSet extends Component{
       render(){
             
             return (<div className="container" >
-                  <h1>{this.state.name}</h1>
+                  <h1>{this.state.name} {(typeof this.state.temp === 'undefined')? "": this.state.temp}</h1>
+                  <div className="row">
+                  <div class="col s8">
                   <form onSubmit={this.searchCity}>
                         <input type="text" id='inputCityName' placeholder="Enter city name"></input>
-                  </form>                        
+                  </form>      
+                                    
+                  </div>
+                  <div class="col s2">
                         <WeatherCard info={this.state.info}  />
+                  </div>
+                  </div>
                   </div>
                   );
       }
