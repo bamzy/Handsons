@@ -1,3 +1,8 @@
-const temp = require('./logs/logger');
+const Logger = require('./logs/logger')
+const logger = new Logger();
 
-temp.log('heey');
+
+logger.on('messageLogged',(args)=>{
+    console.log(args);
+})
+logger.log('hello world')
