@@ -1,0 +1,17 @@
+{
+  "name": "basics",
+  "version": "1.0.0",
+  "description": "just some practice for now",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bamdad",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "moment": "^2.26.0",
+    "mongoose": "^5.9.19",
+    "tslib": "^2.0.0"
+  }
+}
