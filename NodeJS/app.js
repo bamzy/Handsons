@@ -1,10 +1,10 @@
-var Cli = require('./modules/utils/cli');
+var Cli = require('./src/utils/cli');
 var cli = new Cli();
 
 const yargs = require('yargs');
-const Note = require('./modules/model/Note');
-let notes = [];
-
+const Note = require('./src/model/Note');
+const NoteControlelr = require('./src/controller/NoteController');
+const noteControlelr = new NoteControlelr();
 
 yargs.command({
     command: 'add',
@@ -18,13 +18,38 @@ yargs.command({
             describe: 'Note Body',
             demandOption: true,
             type: 'string',
-            
+
         }
     },
     handler: function(argv){
         console.log(`title: ${argv.title}, body: ${argv.body}`)
-        notes.push(new Note(argv.title,argv.body));
+        noteControlelr.addNote(new Note(argv.title,argv.body));
 
+    }
+});
+
+yargs.command({
+    command: 'remove',
+    describe: 'Delete a note',
+    builder:{
+        title: {
+            describe: 'Note Title',
+            demandOption: true,
+            type: 'string'
+        }
+    },
+    handler: function(argv){
+        console.log(`Delete with title: ${argv.title} & body: ${notes.find(element => element.title === argv.title)}`)
+        
+    }
+});
+
+yargs.command({
+    command: 'list',
+    describe: 'List all notes',
+    handler: function(argv){
+        console.log(noteControlelr.getNotes());
+        
     }
 });
 
