@@ -16,12 +16,12 @@ class Logger extends EventEmitter {
         super();
         mongoose.connect('mongodb://localhost:27017/flights', {useNewUrlParser: true, useUnifiedTopology: true});
         
-        this.Log = mongoose.model('Log', { msg: String });
+        this.Log = mongoose.model('Log', { msg: String, date: String });
         this.moment = Moment();
     }
     log(message){
         console.log(chalk.blueBright(`message logged => ${message}`));
-        const log = new this.Log({ msg: message });
+        const log = new this.Log({ msg: message , date: this.moment.format('YYYY-MM-DD hh:mm:ss')});
         log.save();
         this.logFile(message);
 
