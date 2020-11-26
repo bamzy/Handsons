@@ -1,9 +1,9 @@
-var Cli = require('./src/utils/cli');
+var Cli = require('./utils/cli');
 var cli = new Cli();
 
 const yargs = require('yargs');
-const Note = require('./src/model/Note');
-const NoteControlelr = require('./src/controller/NoteController');
+const Note = require('./model/Note');
+const NoteControlelr = require('./controller/NoteController');
 const noteControlelr = new NoteControlelr();
 
 yargs.command({
