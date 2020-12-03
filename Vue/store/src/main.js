@@ -8,3 +8,4 @@ new Vue({
   data: {"myname": 'bamdad', "description": "this is it"}
 }).$mount('#app')
 
+var test = "";

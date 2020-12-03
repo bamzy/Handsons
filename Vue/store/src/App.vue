@@ -1,3 +1,4 @@
+
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
@@ -26,7 +27,7 @@ export default {
   },
   props: {test: String},
   components: {
-    HelloWorld
+    
   }
   
 }
