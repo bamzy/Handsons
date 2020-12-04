@@ -11,6 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "moment": "^2.29.1"
+    "knex": "^0.21.12",
+    "moment": "^2.29.1",
+    "objection": "^2.2.3"
   }
 }

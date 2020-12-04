@@ -3,3 +3,11 @@ GET  http://localhost:5000/api/members HTTP/1.1
 content-type: application/json
 
 ###
+
+GET http://localhost:5000/api/members/7 HTTP/1.1
+//content-type: application/json
+
+###
+
+GET http://localhost:5000/api/members/1 HTTP/1.1
+//content-type: application/json
