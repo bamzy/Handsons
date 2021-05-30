@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "description": "A basic socket.io app",
     "dependencies": {
-        "ws": "^7.3.0"
+        "ws": "^7.4.6"
     },
     "devDependencies": {
         "express": "^4.17.1",
