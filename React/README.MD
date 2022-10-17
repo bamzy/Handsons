@@ -30,9 +30,13 @@ ReactDOM.render(<Person name="aaa" age=""/>,document.querySelector("#root"));
 ```
 
 ### What Is JSX?
-JSX is an XML/HTML-like syntax used by React that extends ECMAScript so that XML/HTML-like text can co-exist with JavaScript/React code. The syntax is intended to be used by preprocessors (i.e., transpilers like Babel) to transform HTML-like text found in JavaScript files into standard JavaScript objects that a JavaScript engine will parse.
+JSX is an XML/HTML-like syntax used by React that extends ECMAScript so that XML/HTML-like text can co-exist with JavaScript/React code.
+The syntax is intended to be used by preprocessors (i.e., transpilers like Babel) to transform
+HTML-like text found in JavaScript files into standard JavaScript objects that a JavaScript 
+engine will parse.
 
-Basically, by using JSX you can write concise HTML/XML-like structures (e.g., DOM like tree structures) in the same file as you write JavaScript code, then Babel will transform these expressions into actual JavaScript code. Unlike the past, instead of putting JavaScript into HTML, JSX allows us to put HTML into JavaScript.
+Basically, by using JSX you can write concise HTML/XML-like structures
+(e.g., DOM like tree structures) in the same file as you write JavaScript code, then Babel will transform these expressions into actual JavaScript code. Unlike the past, instead of putting JavaScript into HTML, JSX allows us to put HTML into JavaScript.
 
 <hr/>
 ## Next-Gen JavaScript features used in React
@@ -66,6 +70,18 @@ const funcName = input1 => {
 //One liner functions can be even shorter
 const functName = input1 => 2*input;
 ```
+
+**some reminder re js **<em>```consts```</em>** which was introduced at ES6 (2015)**
+<br>1. they are NOT re-declarable
+<br>2. they are a reference to an array or an object and the ref itself cannot be changed,
+however the content behind that ref can be changed
+<br>3. constants are not hoistable meaning you have to initialize them right AFTER you have declared them. 
+This is important because with ```var``` you can initialize first and define later like this:
+```js
+a = "hello";
+var a; //this works for variables!!!
+```
+
 
 **3- Writing modular code using Export & Import**
 ```js
@@ -248,3 +264,4 @@ const App = props => {
 npm cache verify    // Heals the npm cache
 npm audit fix       // Auto-Fixes security volnerabilities
 ```
+
