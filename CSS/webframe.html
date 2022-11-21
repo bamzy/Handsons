@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+    <hr>
+    <div id="websitelayout" class="websitelayout">
+        <div class="section item1">left sidebar</div>
+        <div class="section item1">content</div>
+        <div class="section item1">right sidebar</div>
+
+        <div class="section item1 footer">footer</div>
+
+    </div>
+
+
+    <style>
+        .websitelayout {
+            display: grid;
+            grid-gap: 5px;
+            grid-template-areas:
+                    "leftside content rightside";
+                    "leftside content rightside";
+                    "footer footer footer";
+            grid-template-columns: 1fr 10fr 1fr;
+            grid-template-rows: 100px 1fr 50px;
+        }
+        .footer {
+            grid-area: footer;
+        }
+        .section {
+
+        }
+        .container1 {
+            display: grid;
+            grid-template-columns: 100px auto 100px;
+            grid-auto-rows: auto 200px auto;
+            grid-gap: 5px;
+
+        }
+        .container2 {
+            display: grid;
+            grid-template-columns: 100px auto 100px;
+            grid-auto-flow: column;
+            grid-auto-columns: 150px;
+            grid-gap: 20px;
+        }
+        .usefr {
+            display: grid;
+            grid-template-columns: auto 1fr 1fr;/*fr uses free empty spaces after explicit sizes such as gap, etc. */
+            grid-gap: 20px;
+        }
+        .columnspan {
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+        }
+        .autofitandfill {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(auto-fit,minmax(100px,1fr)); /*this is a great to fit everything dynamically */
+        }
+
+        .item1 {
+            margin: 0px;
+            height: auto;
+            background: #dada45;
+            display: grid;
+            border: 1px orange solid;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        }
+        .item2 {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .item1.red {
+            background: #f65a52;
+        }
+        .item1.green {
+            background: #5cd08d;
+        }
+        .item1.blue {
+            background: #4a9cff;
+        }
+        .item3 {
+            background: #BADA55;
+            grid-column-start: 2;
+            grid-column-end: 6;
+        }
+    </style>
+
+
+
+</body>
+</html>
