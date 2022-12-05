@@ -265,3 +265,69 @@ npm cache verify    // Heals the npm cache
 npm audit fix       // Auto-Fixes security volnerabilities
 ```
 
+
+
+# Functional Component vs. Class Component
+
+1.1 this is an example of functional component for react with props 
+
+```js
+<SomeComponent name="Bamdad"/>
+
+//you can define it using an old school function
+function SomeComponent({name}){ //pay attention to the deconstruction here because an array is going to be passed in reality
+                                // function name must be capital
+    return (<div>hellow {name}!</div>); 
+}
+// OR 
+// you can use a fancy arrow function
+const SompeComponent = ({name}) => {
+    return (<div>hellow {name}</div>);
+}
+
+```
+1.2 this is a class component for react which also has props
+
+```js
+<SomeCompoenet name="Bamdad"/>
+class SomeComponent extends React.Component{ //you have to extend the Component class which gives you this.props
+    render(){
+        <div>hellow {this.props.name}!</div>
+    }
+}
+
+```
+2.1 here is a comparison between old school  function component w state vs. component class w state
+```js
+function SomeComponent(){
+    const [count, setCount] = React.useState(0);
+    return (<div>
+        <button onClick={function(){setCount(count++)}}>click me</button>
+    </div>);
+}
+```
+2.2 or using a fancy arrow func
+```js
+const SomeComponent = ()=>{
+    return (<div>
+        <button onClick={() => setCount(count++)}>click me</button>
+    </div>)    
+}
+```
+2.3 or you can go class mode
+```js
+class SomeComponent extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {count:0};
+    }
+    render(){
+        (<div>
+            <button onClick={() => this.state.count++}>click me</button>
+        </div>)
+    }
+}
+```
+The idea is still the same but a class component handles state a bit differently. Firstly, we need to understand the importance of the React.Component constructor. Here is the definition from the official documentation:
+
+“The constructor for a React component is called before it is mounted. When implementing the constructor for a React.Component subclass, you should call super(props) before any other statement. Otherwise, this.props will be undefined in the constructor, which can lead to bugs.”

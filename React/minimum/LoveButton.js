@@ -1,5 +1,4 @@
 'use strict';
-
 const e = React.createElement;
 
 class LikeButton extends React.Component {
@@ -31,7 +30,7 @@ class LoveButton extends React.Component {
         if (this.state.liked) {
             return 'You loved this.';
         }
-
+        return (<div>hii</div>);
         return e(
             'button',
             { onClick: () => this.setState({ liked: true }) , className:"hi"},
@@ -39,3 +38,4 @@ class LoveButton extends React.Component {
         );
     }
 }
+export default LoveButton;

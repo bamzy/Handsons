@@ -8,13 +8,15 @@
   <div id="root"></div>
   <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-  <script src="Test.js" ></script>
+  <script type="text/jsx" src="LoveButton.js" ></script>
   <script >
 
       const root = ReactDOM.createRoot(document.getElementById('root'));
-      root.render(React.createElement(LikeButton));
+      // root.render(React.createElement(LikeButton));
       root.render(React.createElement(LoveButton));
-      // root.render(<h1>Hello, world!</h1>);
+      // ReactDOM.render(<Welcome />, root);
+      // root.render(<Welcome>);
+
 
   </script>
 </body>
