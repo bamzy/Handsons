@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="holster">
+    <div class="scrollable-container">
+        <div class="card black"><img class="img" src="https://images.pexels.com/photos/1519088/pexels-photo-1519088.jpeg?cs=srgb&dl=pexels-james-wheeler-1519088.jpg&fm=jpg"></div>
+        <div class="card yellow"><img class="img" src="https://avatars.mds.yandex.net/i?id=84dbd50839c3d640ebfc0de20994c30d-4473719-images-taas-consumers&n=27&h=480&w=480"></div>
+        <div class="card orange"><img class="img" src=""></div>
+        <div class="card black"><img class="img" src=""></div>
+        <div class="card yellow">5</div>
+        <div class="card orange">6</div>
+    </div>
+</div>
+<style>
+    .scrollable-container {
+        border: 1px solid red;
+
+        overflow: auto;
+        display: flex;
+        scroll-snap-type: x mandatory;
+        flex: none;
+    }
+    .card {
+        width: 100%;
+        height: 128px;
+        flex-flow: row nowrap;
+        border: 1px solid #4ef80b;
+        text-align: center;
+        scroll-snap-align: start;
+        flex: none;
+        line-height: 128px;
+        font-size: 64px;
+        color: white;
+
+
+    }
+    .img {
+        max-width: auto;
+        max-height: 100%;
+    }
+    .black {
+        background-color: #1b1e21;
+    }
+    .yellow {
+        background-color: #e3e35f;
+    }
+    .orange {
+        background-color: #f8942c;
+    }
+    .holster {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-flow: column nowrap;;
+        border: 2px solid black;
+    }
+</style>
+</body>
+</html>
