@@ -53,5 +53,5 @@ function randomSquare(ctx) {
     };
 }
 
-export { name, draw, reportArea, reportPerimeter };
+export { name as newname, draw, reportArea, reportPerimeter };
 export default randomSquare;
