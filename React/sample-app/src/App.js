@@ -19,7 +19,7 @@ class App extends React.Component {
 
     const options = {
       method: 'GET',
-      url: 'https://the-cocktail-db.p.rapidapi.com/search.php',
+      url: 'https://catfact.ninja/fact',
       params: {s: 'vodka'},
       headers: {
         'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY',
@@ -27,8 +27,9 @@ class App extends React.Component {
       }
     };
 
-    axios.request(options).then(function (response) {
-      console.log(response.data);
+    axios.request(options).then( (response) =>{
+      console.dir(response.data.fact);
+      this.setState({ingredients:response.data.fact})
     }).catch(function (error) {
       console.error(error);
     });
@@ -42,7 +43,7 @@ class App extends React.Component {
       <div className="App">
 
         <h1>{this.state.text}</h1>
-        <h2>Ingred: {this.state.ingredients}</h2>
+        <h2>Cat Fact: {this.state.ingredients}</h2>
         <input type="text" onChange={this.handleType}/>
       </div>
     );
