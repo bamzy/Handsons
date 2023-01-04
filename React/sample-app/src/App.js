@@ -2,6 +2,10 @@ import logo from './logo.svg';
 import React from 'react';
 import './App.css';
 import axios from 'axios';
+
+import NavBar from './NavBar';
+
+
 class App extends React.Component {
   constructor() {
     super();
@@ -39,12 +43,15 @@ class App extends React.Component {
   }
 
   render(){
+
+
     return (
       <div className="App">
 
         <h1>{this.state.text}</h1>
         <h2>Cat Fact: {this.state.ingredients}</h2>
         <input type="text" onChange={this.handleType}/>
+        <NavBar />
       </div>
     );
   }
