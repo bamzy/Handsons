@@ -1,3 +1,10 @@
+import NavBar from "./NavBar";
+
 export default function About(){
-    return (<h1>this is our about page with some garbage</h1>);
+    return (
+        <div className="App">
+
+            <p>this is our about page with some garbage</p>
+        </div>
+    );
 }
