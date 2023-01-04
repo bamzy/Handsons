@@ -44,9 +44,9 @@ export default class Home extends Component{
     render() {
         return (
             <div className="App">
-                <h1>{this.props.var}</h1>
 
                 <h1>{this.state.text}</h1>
+                <img className="cat-img" src="https://cataas.com/cat" />
                 <h2 className="gradient-text">Did you know: {this.state.ingredients}</h2>
                 <button onClick={this.fetchFact}>next</button>
             </div>);
