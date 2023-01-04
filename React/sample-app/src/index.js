@@ -2,29 +2,49 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import About from './About';
+import About from './pages/About';
 
 import {
     createBrowserRouter,
     RouterProvider,
 } from "react-router-dom";
+import NavBar from "./pages/NavBar";
+import Home from "./pages/Home";
+import ErrorPage from "./pages/ErrorPage";
+import Customer from "./pages/Customer";
 
 const router = createBrowserRouter([
     {
-        exact: true,
+
         path: "/",
-        element: <App />,
+        element: <NavBar />,
+        errorElement : <ErrorPage />,
+        children: [
+            {
+                path: "/",
+                element: <Home />,
+            }, {
+                path: "about",
+                element: <About />,
+                children: [
+                    {
+                        path: "client",
+                        element: <h1>hey client</h1>
+                    },
+                    {
+                        path: "customer",
+                        element: <Customer />
+                    }
+                ]
+            },
+        ],
     },
-    {
-        exact: false,
-        path: "/about",
-        element: <About />,
-    },
+
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <App  />
-    // <RouterProvider router={router} />
+    // <App  />
+    <RouterProvider router={router} />
 );
 
 

@@ -1,9 +1,10 @@
 import {
-    Link,
-    RouterProvider,
+    Link, Outlet,
+    RouterProvider, useNavigate,
 } from "react-router-dom";
-export default function NavBar(){
-
+export default function NavBar(props){
+    const history = useNavigate();
+    console.log(history);
     return (
         <div>
             <nav>
@@ -15,7 +16,7 @@ export default function NavBar(){
             </nav>
 
 
-
+<Outlet />
 
         </div>
     );

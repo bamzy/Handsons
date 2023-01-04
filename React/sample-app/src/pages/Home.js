@@ -1,10 +1,11 @@
 import {Component} from 'react';
 import axios from "axios";
-import NavBar from "./NavBar";
+
 
 export default class Home extends Component{
-    constructor(props) {
-        super(props);
+    constructor() {
+
+        super();
         this.state = {text: "Cat Fact of the Day!",ingredients:""};
 
     }
@@ -46,7 +47,7 @@ export default class Home extends Component{
             <div className="App">
 
                 <h1>{this.state.text}</h1>
-                <img className="cat-img" src="https://cataas.com/cat" />
+                <img className={`cat-img`} src="https://cataas.com/cat" />
                 <h2 className="gradient-text">Did you know: {this.state.ingredients}</h2>
                 <button onClick={this.fetchFact}>next</button>
             </div>);

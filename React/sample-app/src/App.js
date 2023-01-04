@@ -1,34 +1,36 @@
-import logo from './logo.svg';
+
 import React from 'react';
+import {BrowserRouter as Router, Routes, Route, useNavigate} from "react-router-dom";
 import './App.css';
-import axios from 'axios';
-
-import {
-  BrowserRouter as Router, Routes, Route
-} from "react-router-dom";
-
-import NavBar from './NavBar';
-import Home from "./Home";
-import About from "./About";
 
 
-class App extends React.Component {
+import NavBar from './pages/NavBar';
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Customer from "./pages/Customer";
 
-  render(){
+
+function App() {
 
 
+
+    return;
     return (
         <Router>
-          <NavBar/>
+            <NavBar ></NavBar>
           <Routes>
 
-            <Route exact="true" path={"/"} element={<Home var={"eeeeho"}/>} />
-            <Route path={"/about"} element={<About />} />
+
+              <Route  path={"/"} element={<Home var={this.props}/>} >
+              </Route>
+                <Route  path={"/about"} element={<About />} >
+
+                </Route>
           </Routes>
 
         </Router>
     );
-  }
+
 }
 
 export default App;
