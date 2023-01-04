@@ -16,7 +16,10 @@ export default class Home extends Component{
     }
     componentDidMount() {
         console.log('finished mouting');
+        this.fetchFact();
 
+    }
+    fetchFact = ()=>{
         const options = {
             method: 'GET',
             url: 'https://catfact.ninja/fact',
@@ -45,7 +48,7 @@ export default class Home extends Component{
 
                 <h1>{this.state.text}</h1>
                 <h2 className="gradient-text">Did you know: {this.state.ingredients}</h2>
-
+                <button onClick={this.fetchFact}>next</button>
             </div>);
     }
 }
