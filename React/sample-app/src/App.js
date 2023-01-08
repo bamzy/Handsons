@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, {useState} from 'react';
 import {BrowserRouter as Router, Routes, Route, useNavigate} from "react-router-dom";
 import './App.css';
 
@@ -13,7 +13,7 @@ import Customer from "./pages/Customer";
 function App() {
 
 
-
+    const [state,setState] = useState({'one':1,'two':2})
     return;
     return (
         <Router>

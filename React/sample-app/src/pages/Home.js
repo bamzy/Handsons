@@ -1,5 +1,6 @@
 import {Component} from 'react';
 import axios from "axios";
+import Test from "./Test";
 
 
 export default class Home extends Component{
@@ -50,6 +51,7 @@ export default class Home extends Component{
                 <img className={`cat-img`} src="https://cataas.com/cat" />
                 <h2 className="gradient-text">Did you know: {this.state.ingredients}</h2>
                 <button onClick={this.fetchFact}>next</button>
+                <Test />
             </div>);
     }
 }

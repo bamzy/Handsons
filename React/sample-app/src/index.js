@@ -12,6 +12,7 @@ import NavBar from "./pages/NavBar";
 import Home from "./pages/Home";
 import ErrorPage from "./pages/ErrorPage";
 import Customer from "./pages/Customer";
+import Movies from "./pages/Movies";
 
 const router = createBrowserRouter([
     {
@@ -23,7 +24,12 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home />,
-            }, {
+            },
+            {
+                path: "movies",
+                element: <Movies />
+            },
+            {
                 path: "about",
                 element: <About />,
                 children: [
