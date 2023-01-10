@@ -5,17 +5,18 @@ const mongoose = require('mongoose');
 const MongoStore = require('connect-mongo');
 const {Schema} = require("mongoose");
 
+require('dotenv').config()
 
-const dbUri = "mongodb+srv://root:salam@bamdad-cluster.xjbfs7r.mongodb.net/?retryWrites=true&w=majority";
+
 
 const app = new express();
 
 
 const mongoSessionStore =  MongoStore.create({
-     mongoUrl: dbUri
+     mongoUrl: process.env.DB_URL
 });
 
-mongoose.connect(dbUri);
+mongoose.connect(process.env.DB_URL);
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error: "));
 db.once("open", async function () {
@@ -32,14 +33,17 @@ db.once("open", async function () {
 });
 const firstMW = function(req,res,next){
     // res.send('<h2>first</h2>');
-    console.dir('first middleware, req:');
+    console.dir('first middleware session:');
+    console.log(req.session);
     req.customField = 'bamdad';
 
     next();
 }
 const secondMW = (req,res,next) => {
     // res.send('<h2>first</h2>');
-    console.log('second middleware, req:'+req);
+    console.log('second middleware');
+
+    console.log(req.session);
     req.customField += ' Kordi' ;
     next();
 }
@@ -67,9 +71,11 @@ app.use(session({
     store: mongoSessionStore
 }))
 app.get('/',(req,res)=>{ //route specific middleware
-    console.log('main middleware');
-    console.log(req.customField);
-    res.send('<h1>sanity check</h1>');
+    console.log('main middleware session');
+    if (!req.session.myfield) req.session.myfield = 0;
+    req.session.myfield++;
+    console.log(req.session);
+    res.send(`<h1>sanity check ${req.session.myfield}</h1>`);
 })
 app.listen(3001,()=>{
     console.log('app is running');
